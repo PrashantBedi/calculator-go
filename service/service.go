@@ -3,13 +3,8 @@ package service
 import (
     "encoding/json"
     "net/http"
-	"strconv"
+    "strconv"
 )
-
-type input struct {
-	Number1 int
-	Number2 int
-}
 
 func Sum(w http.ResponseWriter, req *http.Request) {
 	var values = getValues(req)
@@ -27,9 +22,9 @@ func Sub(w http.ResponseWriter, req *http.Request) {
 	w.Write([]byte(responseString))
 }
 
-func getValues(req *http.Request) input{
+func getValues(req *http.Request) Input{
 	decoder := json.NewDecoder(req.Body)
-    var t input
+    var t Input
     err := decoder.Decode(&t)
     if err != nil {
         panic(err)
