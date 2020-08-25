@@ -16,5 +16,5 @@ func main() {
     // http.HandleFunc("/sum", service.Sum)
 	// http.HandleFunc("/sub", service.Sub)
 
-    http.ListenAndServe(":8090", nil)
+    http.ListenAndServe(":8090", router)
 }
