@@ -25,6 +25,7 @@ func initDatabase() {
 	if err != nil {
 		panic("Failed to connect to database. Reason: "+ err.Error())
 	}
+	database.DBConn.AutoMigrate(&service.Input{})
 }
 
 func main() {

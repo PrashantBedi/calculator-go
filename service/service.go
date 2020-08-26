@@ -1,10 +1,12 @@
 package service
 
 import (
+	"calculator/database"
+	// "fmt"
     "encoding/json"
-    // "net/http"
-    // "strconv"
-    "github.com/gofiber/fiber"
+	// "net/http"
+	// "strconv"
+	"github.com/gofiber/fiber"
 )
 
 // Used when using mux or default library
@@ -20,19 +22,23 @@ import (
 // Using filter
 
 func Sum(c *fiber.Ctx) {
-    var values Input
-    json.Unmarshal([]byte(c.Body()), &values)
-	var result = values.Number1 + values.Number2
-    c.Send(result)
+	var values Input
+	json.Unmarshal([]byte(c.Body()), &values)
+    values.Result = values.Number1 + values.Number2
+    values.Operation = string("+")
+    database.DBConn.Create(&values)
+	c.Send(values.Result)
 }
 
 // Using filter
 
 func Sub(c *fiber.Ctx) {
-    var values Input
-    json.Unmarshal([]byte(c.Body()), &values)
-	var result = values.Number1 - values.Number2
-    c.Send(result)
+	var values Input
+	json.Unmarshal([]byte(c.Body()), &values)
+    values.Result = values.Number1 - values.Number2
+    values.Operation = string("-")
+    database.DBConn.Create(&values)
+	c.Send(values.Result)
 }
 
 // func Sub(w http.ResponseWriter, req *http.Request) {
