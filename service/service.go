@@ -41,6 +41,14 @@ func Sub(c *fiber.Ctx) {
 	c.Send(values.Result)
 }
 
+// Using filter
+
+func History(c *fiber.Ctx) {
+    var history []Input
+    database.DBConn.Find(&history)
+    c.JSON(history)
+}
+
 // func Sub(w http.ResponseWriter, req *http.Request) {
 // 	var values = getValues(req)
 // 	var result = values.Number1 - values.Number2

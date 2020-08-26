@@ -17,6 +17,7 @@ func setupRoutes(app *fiber.App) {
 	// Used with fiber
 	app.Post("/sum", service.Sum)
 	app.Post("/sub", service.Sub)
+	app.Get("/history", service.History)
 }
 
 func initDatabase() {
