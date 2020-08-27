@@ -4,11 +4,13 @@ import (
 	// "net/http"
 	"calculator/database"
 	"calculator/service"
-
+	"calculator/logger"
 	// "github.com/gorilla/mux"
+	// "os"
 	"github.com/gofiber/fiber"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	// log "github.com/sirupsen/logrus"
 )
 
 // Used to set routes
@@ -18,6 +20,9 @@ func setupRoutes(app *fiber.App) {
 	app.Post("/sum", service.Sum)
 	app.Post("/sub", service.Sub)
 	app.Get("/history", service.History)
+	// logger.InfoLogger.Println("Routes Generated")
+	// log.Info("Routes Generated")
+	logger.Logger.Info("Routes Generated")
 }
 
 func initDatabase() {
@@ -27,11 +32,24 @@ func initDatabase() {
 		panic("Failed to connect to database. Reason: "+ err.Error())
 	}
 	database.DBConn.AutoMigrate(&service.Input{})
+	// logger.InfoLogger.Println("Connection with db established")
+	// log.Info("Connection with db establlished")
+	logger.Logger.Info("Connection with db established")
 }
 
 func main() {
 	defer database.DBConn.Close()
-	
+
+	// file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+    // if err != nil {
+    //     log.Fatal(err)
+	// }
+
+	// defer file.Close()
+
+	// log.SetFormatter(&log.JSONFormatter{})
+	// log.SetOutput(file)
+	logger.InitializeLogger()
 	// Using fiber
 
 	var router = fiber.New()
