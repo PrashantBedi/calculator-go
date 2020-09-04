@@ -1,10 +1,13 @@
 package service
 
 import (
+	"errors"
+	"go.uber.org/zap"
 	"calculator/database"
+	"calculator/logger"
 	// "fmt"
     "encoding/json"
-	// "net/http"
+	"net/http"
 	// "strconv"
 	"github.com/gofiber/fiber"
 )
@@ -26,7 +29,12 @@ func Sum(c *fiber.Ctx) {
 	json.Unmarshal([]byte(c.Body()), &values)
     values.Result = values.Number1 + values.Number2
     values.Operation = string("+")
-    database.DBConn.Create(&values)
+	database.DBConn.Create(&values)
+	var valuesJson, err = json.Marshal(values)
+	if(err != nil) {
+		panic(err.Error())
+	}
+	logger.Logger.Info(string(valuesJson), zap.Int("response", values.Result))
 	c.Send(values.Result)
 }
 
@@ -36,8 +44,13 @@ func Sub(c *fiber.Ctx) {
 	var values Input
 	json.Unmarshal([]byte(c.Body()), &values)
     values.Result = values.Number1 - values.Number2
-    values.Operation = string("-")
-    database.DBConn.Create(&values)
+	values.Operation = string("-")
+	database.DBConn.Create(&values)
+	var valuesJson, err = json.Marshal(values)
+	if(err != nil) {
+		panic(err.Error())
+	}
+	logger.Logger.Info(string(valuesJson), zap.Int("response", values.Result))
 	c.Send(values.Result)
 }
 
@@ -47,6 +60,12 @@ func History(c *fiber.Ctx) {
     var history []Input
     database.DBConn.Find(&history)
     c.JSON(history)
+}
+
+func Exception(c *fiber.Ctx) {
+	err := errors.New("Abc")
+	c.Status(http.StatusBadRequest)
+	c.Send(err)
 }
 
 // func Sub(w http.ResponseWriter, req *http.Request) {

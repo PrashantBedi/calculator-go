@@ -1,7 +1,6 @@
 package logger
 
 import (
-	// "log"
 	"os"
 	"path"
 	"go.uber.org/zap"
@@ -10,26 +9,16 @@ import (
 )
 
 var (
-	// InfoLogger *log.Logger
 	Logger *zap.Logger
 	lumberjackLogger *lumberjack.Logger
 )
 
 func InitializeLogger() {
-	// file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
-    // if err != nil {
-	//   log.Fatal(err)
-	// }
 	Logger, _ = zap.NewProduction()
-	// Logger, _ = zap.New(
-	// 	zap.Object(),
-	// 	zap.AddCaller()
-	// )
-	Configure("logs.txt","/Users/prashantbedi/workspace-go/calculator")
-	// InfoLogger = log.New(file, "Info: ", log.Ldate|log.Ltime|log.Lshortfile)
+	configure("logs.txt","/Users/prashantbedi/workspace-go/calculator")
 }
 
-func Configure(logfilename string, logdir string) {
+func configure(logfilename string, logdir string) {
 	writers := []zapcore.WriteSyncer{os.Stdout}
 	if logdir != "" {
 		writers = append(writers, newRollingFile(logfilename, logdir))
@@ -57,7 +46,6 @@ func newRollingFile(logfilename string, logdir string) zapcore.WriteSyncer {
 		MaxAge:     10, //days
 		MaxBackups: 5,  //files
 	}
-
 	return zapcore.AddSync(lumberjackLogger)
 }
 
@@ -66,16 +54,16 @@ func newZapLogger(output zapcore.WriteSyncer) *zap.Logger {
 		TimeKey:        "@timestamp",
 		LevelKey:       "level",
 		NameKey:        "logger",
-		CallerKey:      "caller",
+		CallerKey:      "logger_name",
 		MessageKey:     "message",
 		StacktraceKey:  "stacktrace",
-		EncodeCaller:   zapcore.FullCallerEncoder,
+		EncodeCaller:   zapcore.ShortCallerEncoder,
 		EncodeLevel:    zapcore.LowercaseLevelEncoder,
 		EncodeTime:     zapcore.ISO8601TimeEncoder,
 		EncodeDuration: zapcore.NanosDurationEncoder,
 	}
 
 	encoder := zapcore.NewJSONEncoder(encCfg)
-
-	return zap.New(zapcore.NewCore(encoder, output, zap.NewAtomicLevel()))
+	var core = zapcore.NewTee(zapcore.NewCore(encoder, output, zap.NewAtomicLevel()))
+	return zap.New(core, zap.AddCaller())
 }

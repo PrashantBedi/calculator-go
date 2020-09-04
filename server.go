@@ -5,6 +5,7 @@ import (
 	"calculator/database"
 	"calculator/service"
 	"calculator/logger"
+	"calculator/config"
 	// "github.com/gorilla/mux"
 	// "os"
 	"github.com/gofiber/fiber"
@@ -20,14 +21,15 @@ func setupRoutes(app *fiber.App) {
 	app.Post("/sum", service.Sum)
 	app.Post("/sub", service.Sub)
 	app.Get("/history", service.History)
+	app.Get("/error", service.Exception)
 	// logger.InfoLogger.Println("Routes Generated")
 	// log.Info("Routes Generated")
-	logger.Logger.Info("Routes Generated")
+	logger.Logger.Info("Routes Generated")	
 }
 
 func initDatabase() {
 	var err error
-	database.DBConn, err = gorm.Open("postgres", "host=localhost port=5432 user=prashantbedi dbname=calculator password=postgres sslmode=disable")
+	database.DBConn, err = gorm.Open("postgres", "host="+config.Cfg.Host+" port="+config.Cfg.Port+" user="+config.Cfg.User+" dbname="+config.Cfg.Dbname+" password="+config.Cfg.Password+" sslmode=disable")
 	if err != nil {
 		panic("Failed to connect to database. Reason: "+ err.Error())
 	}
@@ -40,6 +42,8 @@ func initDatabase() {
 func main() {
 	defer database.DBConn.Close()
 
+	config.Read()
+	config.ReadProperties()
 	// file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
     // if err != nil {
     //     log.Fatal(err)
