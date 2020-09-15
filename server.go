@@ -20,6 +20,7 @@ func setupRoutes(app *fiber.App) {
 	// Used with fiber
 	app.Post("/sum", service.Sum)
 	app.Post("/sub", service.Sub)
+	app.Post("/div", service.Div)
 	app.Get("/history", service.History)
 	app.Get("/error", service.Exception)
 	// logger.InfoLogger.Println("Routes Generated")
@@ -42,8 +43,9 @@ func initDatabase() {
 func main() {
 	defer database.DBConn.Close()
 
-	config.Read()
-	config.ReadProperties()
+	config.ReadPropertiesViper()
+	// config.Read()
+	// config.ReadProperties()
 	// file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
     // if err != nil {
     //     log.Fatal(err)
@@ -55,6 +57,9 @@ func main() {
 	// log.SetOutput(file)
 	logger.InitializeLogger()
 	// Using fiber
+
+	// service.FraudService()
+	// service.BankClient()
 
 	var router = fiber.New()
 

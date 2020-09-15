@@ -1,6 +1,8 @@
 package service
 
 import (
+	"calculator/errorcodes"
+	"calculator/customerror"
 	"errors"
 	"go.uber.org/zap"
 	"calculator/database"
@@ -10,6 +12,7 @@ import (
 	"net/http"
 	// "strconv"
 	"github.com/gofiber/fiber"
+	"github.com/google/uuid"
 )
 
 // Used when using mux or default library
@@ -28,7 +31,8 @@ func Sum(c *fiber.Ctx) {
 	var values Input
 	json.Unmarshal([]byte(c.Body()), &values)
     values.Result = values.Number1 + values.Number2
-    values.Operation = string("+")
+	values.Operation = string("+")
+	values.ID = generateID()
 	database.DBConn.Create(&values)
 	var valuesJson, err = json.Marshal(values)
 	if(err != nil) {
@@ -45,6 +49,31 @@ func Sub(c *fiber.Ctx) {
 	json.Unmarshal([]byte(c.Body()), &values)
     values.Result = values.Number1 - values.Number2
 	values.Operation = string("-")
+	values.ID = generateID()
+	database.DBConn.Create(&values)
+	var valuesJson, err = json.Marshal(values)
+	if(err != nil) {
+		panic(err.Error())
+	}
+	logger.Logger.Info(string(valuesJson), zap.Int("response", values.Result))
+	c.Send(values.Result)
+}
+
+func Div(c *fiber.Ctx) {
+	var values Input
+	json.Unmarshal([]byte(c.Body()), &values)
+	if values.Number2 == 0 {
+		failureResponse := customerror.ErrorDetails{
+			Message: "Cannot divide by zero",
+			ErrorCode: errorcodes.DivideByZero,
+		}.DivisionException()
+		c.Status(http.StatusBadRequest)
+		c.JSON(failureResponse)
+		return
+	}
+    values.Result = values.Number1 / values.Number2
+	values.Operation = string("/")
+	values.ID = generateID()
 	database.DBConn.Create(&values)
 	var valuesJson, err = json.Marshal(values)
 	if(err != nil) {
@@ -87,3 +116,11 @@ func Exception(c *fiber.Ctx) {
 //     }
 //     return t
 // }
+
+func generateID() string{
+	uuid, err := uuid.NewUUID()
+	if err != nil {
+		panic(err.Error())
+	}
+	return uuid.String()
+}

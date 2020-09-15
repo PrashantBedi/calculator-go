@@ -171,3 +171,73 @@
 {"level":"info","@timestamp":"2020-09-04T16:18:11.386+0530","logger_name":"calculator/server.go:39","message":"Connection with db established"}
 {"level":"info","@timestamp":"2020-09-04T16:18:11.386+0530","logger_name":"calculator/server.go:27","message":"Routes Generated"}
 {"level":"info","@timestamp":"2020-09-04T16:28:29.507+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-04T17:06:50.911+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T12:25:28.452+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T12:26:27.129+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T12:26:27.408+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T12:26:27.408+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T12:28:19.374+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T12:28:19.448+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T12:28:19.449+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T12:58:57.088+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T12:58:57.227+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T12:58:57.227+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:01:47.731+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:01:47.801+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:01:47.801+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:04:10.836+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:04:10.906+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:04:10.906+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:04:32.471+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:04:32.533+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:04:32.533+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:04:45.929+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:04:46.076+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:04:46.076+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:05:07.358+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:05:07.431+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:05:07.431+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:06:22.121+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:06:22.193+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:06:22.193+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:07:52.600+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:07:52.669+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:07:52.669+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:34:30.526+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:34:30.664+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:34:30.664+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:40:17.425+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-07T13:40:17.495+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-07T13:40:17.495+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-07T13:40:29.343+0530","logger_name":"service/service.go:78","message":"{\"ID\":10,\"CreatedAt\":\"2020-09-07T13:40:29.294253+05:30\",\"UpdatedAt\":\"2020-09-07T13:40:29.294253+05:30\",\"DeletedAt\":null,\"Number1\":10,\"Number2\":1,\"Result\":10,\"Operation\":\"/\"}","response":10}
+{"level":"info","@timestamp":"2020-09-08T10:29:35.593+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:30:21.317+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:37:25.279+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:37:46.700+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:39:18.935+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:40:20.611+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:40:54.189+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:41:21.554+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:41:21.805+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-08T10:41:21.805+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-08T10:42:01.849+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:42:02.061+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-08T10:42:02.061+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-08T10:45:19.240+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:45:19.439+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-08T10:45:19.439+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-08T10:55:39.228+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T10:55:41.137+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-08T10:55:41.137+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-08T14:39:04.387+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T14:39:22.788+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T14:40:15.086+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T14:40:15.811+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-08T14:40:15.811+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-08T14:42:09.155+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T14:42:09.187+0530","logger_name":"calculator/server.go:40","message":"Connection with db established"}
+{"level":"info","@timestamp":"2020-09-08T14:42:09.187+0530","logger_name":"calculator/server.go:28","message":"Routes Generated"}
+{"level":"info","@timestamp":"2020-09-08T15:00:59.068+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T15:01:33.347+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T15:02:23.487+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
+{"level":"info","@timestamp":"2020-09-08T15:16:37.790+0530","logger_name":"logger/logger.go:29","message":"logging configured","fileLogging":true,"logDirectory":"/Users/prashantbedi/workspace-go/calculator","logFilename":"logs.txt"}
